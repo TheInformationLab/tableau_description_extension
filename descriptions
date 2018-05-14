@@ -8,7 +8,7 @@
         <author name="Andre de Vries" email="andre.devries@theinformationlab.co.uk" organization="The Information Lab" website="https://www.theinformationlab.co.uk"></author>
         <min-api-version>1.1</min-api-version>
         <source-location>
-            <url>http://localhost:5500/index.html</url>
+            <url>https://andre347.github.io/tableau_description_extension/index.html</url>
         </source-location>
         <icon></icon>
         <context-menu>
