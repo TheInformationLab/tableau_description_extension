@@ -21,7 +21,9 @@ function load() {
 }
 
 function configure() {
-  const popup = `${window.location.origin}/configure.html`;
+  const popup = `${
+    window.location.origin
+  }/tableau_description_extension/configure.html`;
   tableau.extensions.ui
     .displayDialogAsync(popup, "Payload Message", {
       height: 600,
