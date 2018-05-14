@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/material-components-web.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <script src="js/material-components-web.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Description Extension</title>
+
+</head>
+
+<body class="mdc-typography">
+    <nav id="basic-tab-bar" class="mdc-tab-bar">
+        <a class="mdc-tab mdc-tab--active" href="#">Select Fields
+            <span class="mdc-tab__indicator"></span>
+        </a>
+        <a class="mdc-tab" href="./about.html">About Extension
+            <span class="mdc-tab__indicator"></span>
+        </a>
+    </nav>
+    <div class="mdc-card mdc-card--outlined configure-card">
+        <div class="card-content">
+            <ul class="mdc-list" id="columns">
+            </ul>
+        </div>
+        <div class="mdc-card__actions mdc-card__actions--full-bleed">
+            <div class="mdc-card__action-buttons">
+                <button class="mdc-button mdc-card__action mdc-card__action--button mdc-theme--primary mdc-button--raised" style="color: #fff !important; background-color: orange"
+                    id="saveButton">Save</button>
+                <button class="mdc-button mdc-card__action mdc-card__action--button mdc-theme--secondary" id="cancelButton">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/tableau-extensions-0.12.8.min.js"></script>
+    <script src="js/configure.js"></script>
+</body>
+
+</html>
