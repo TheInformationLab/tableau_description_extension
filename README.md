@@ -12,4 +12,4 @@ Tableau Extension that allows you to create a description table in your dashboar
 2.  Open Tableau (currently only beta 2018.2 can read the trex manifest file) and add an extension object in the dashboard
 3.  Submit any bugs/requests by Twitter/Email/Github
 
-![image](https://ibb.co/mHWqGJ)
+![image](https://thumb.ibb.co/mHWqGJ/Screen_Shot_2018_05_14_at_16_51_06.png)
