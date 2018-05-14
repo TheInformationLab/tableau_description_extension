@@ -63,6 +63,7 @@ function showTable() {
   data.forEach(e => {
     let row = `<tr>
           <td>${e.name}</td>
+          <td>${e.calculated}</td>
           <td>${e.description}</td>
       </tr>`;
     table.innerHTML += row;

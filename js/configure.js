@@ -23,7 +23,7 @@ function load() {
     dashboard.worksheets[0].getDataSourcesAsync().then(function(column) {
       column[0].fields.forEach((fieldName, item) => {
         if (fieldName.description !== undefined) {
-          console.log(fieldName.name, fieldName.description);
+          console.log(fieldName);
           let li = `
           <li class="mdc-list-item checkbox-list-ripple-surface">
         <div class="mdc-form-field">
@@ -31,7 +31,7 @@ function load() {
             <input type="checkbox"
                    id="${item}" name="${fieldName.name}" data-value="${
             fieldName.description
-          }"
+          }" data-calc="${fieldName.isCalculatedField}"
                    class="mdc-checkbox__native-control" checked/>
             <div class="mdc-checkbox__background">
               <svg class="mdc-checkbox__checkmark"
@@ -63,7 +63,8 @@ function settings() {
     if (columns.checked === true) {
       let object = {
         name: columns.name,
-        description: columns.getAttribute("data-value")
+        description: columns.getAttribute("data-value"),
+        calculated: columns.getAttribute("data-calc")
       };
       selectedColumns.push(object);
     }
