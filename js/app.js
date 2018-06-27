@@ -54,7 +54,7 @@ function showTable() {
   //remove the button
   document.querySelector(".mdc-card__actions").style.display = "none";
   let selectedColumns = tableau.extensions.settings.get(selectColumns);
-  console.log(JSON.parse(selectedColumns));
+  // console.log(JSON.parse(selectedColumns));
   let data = JSON.parse(selectedColumns);
 
   //get table and loop over to add the name + descriptions
