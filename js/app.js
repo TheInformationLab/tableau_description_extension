@@ -63,10 +63,7 @@ function showTable() {
   //remove the current table
   table.innerHTML = "";
 
-  console.log(data);
-
   data.forEach(e => {
-    console.log(e);
     let row = `<tr class=${e.role}>
           <td>${e.name}</td>
           <td>${e.role}</td>
