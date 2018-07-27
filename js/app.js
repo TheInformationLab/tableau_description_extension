@@ -24,6 +24,7 @@ function configure() {
   const popup = `${
     window.location.origin
   }/tableau_description_extension/configure.html`;
+  // }/configure.html`;
   tableau.extensions.ui
     .displayDialogAsync(popup, "Payload Message", {
       height: 600,
@@ -57,14 +58,18 @@ function showTable() {
   // console.log(JSON.parse(selectedColumns));
   let data = JSON.parse(selectedColumns);
 
-  //get table and loop over to add the name + descriptions
+  //get table and loop over to add the name + descriptions + role + calculated field
   let table = document.getElementById("table");
   //remove the current table
   table.innerHTML = "";
 
+  console.log(data);
+
   data.forEach(e => {
-    let row = `<tr>
+    console.log(e);
+    let row = `<tr class=${e.role}>
           <td>${e.name}</td>
+          <td>${e.role}</td>
           <td>${e.calculated}</td>
           <td>${e.description}</td>
       </tr>`;

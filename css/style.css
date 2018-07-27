@@ -6,6 +6,14 @@
   height: 100%;
 }
 
+.measure:hover {
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+.dimension:hover {
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
 .mdc-tab__indicator {
   background-color: orange;
 }
@@ -29,7 +37,7 @@
 :root {
   --mdc-data-table-light-theme-bg-color: #fff;
   --mdc-data-table-light-theme-border-color: #e0e0e0;
-  --mdc-data-table-light-theme-row-hover: #eee;
+  --mdc-data-table-light-theme-row-hover: rgb(104, 73, 73);
   --mdc-data-table-light-theme-row-selected: #f5f5f5;
 }
 .mdc-data-table {
@@ -163,9 +171,10 @@
 .mdc-data-table__content td {
   font-size: 14px;
 }
-.mdc-data-table__content tbody tr:hover {
-  background-color: #eee;
+.mdc-data-table__content .measure tbody tr:hover {
+  background-color: rgb(83, 11, 11);
 }
+
 .mdc-data-table__footer {
   color: rgba(0, 0, 0, 0.54) !important;
   color: var(

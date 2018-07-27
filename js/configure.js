@@ -21,8 +21,12 @@ function load() {
     let displayColumn = document.getElementById("columns");
     const dashboard = tableau.extensions.dashboardContent.dashboard;
     dashboard.worksheets[0].getDataSourcesAsync().then(function(column) {
+      console.log(column);
       column[0].fields.forEach((fieldName, item) => {
-        if (fieldName.description !== undefined) {
+        if (
+          fieldName.description !== undefined &&
+          fieldName.isHidden !== true
+        ) {
           console.log(fieldName);
           let li = `
           <li class="mdc-list-item checkbox-list-ripple-surface">
@@ -31,7 +35,9 @@ function load() {
             <input type="checkbox"
                    id="${item}" name="${fieldName.name}" data-value="${
             fieldName.description
-          }" data-calc="${fieldName.isCalculatedField}"
+          }" data-calc="${fieldName.isCalculatedField}" data-role="${
+            fieldName.role
+          }"
                    class="mdc-checkbox__native-control" checked/>
             <div class="mdc-checkbox__background">
               <svg class="mdc-checkbox__checkmark"
@@ -63,6 +69,7 @@ function settings() {
     if (columns.checked === true) {
       let object = {
         name: columns.name,
+        role: columns.getAttribute("data-role"),
         description: columns.getAttribute("data-value"),
         calculated: columns.getAttribute("data-calc")
       };
