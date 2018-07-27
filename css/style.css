@@ -1,3 +1,8 @@
+body {
+  height: 100vh;
+  overflow-y: none;
+}
+
 .mdc-typography {
   margin: 0px;
   padding: 0px;
@@ -6,12 +11,40 @@
   height: 100%;
 }
 
+.mdc-layout-grid {
+  padding: 10px;
+}
+
+.mdc-tab {
+  font-size: 12px;
+}
+
+.columnSelect {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+.mdc-tab-bar {
+  background-color: rgb(245, 245, 245);
+  font-size: 12px;
+  height: 39px;
+  width: 100%;
+}
+
 .measure:hover {
   background-color: rgba(0, 255, 0, 0.1);
 }
 
 .dimension:hover {
   background-color: rgba(0, 0, 255, 0.1);
+}
+
+#contact {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
 }
 
 .mdc-tab__indicator {

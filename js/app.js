@@ -27,8 +27,8 @@ function configure() {
   // }/configure.html`;
   tableau.extensions.ui
     .displayDialogAsync(popup, "Payload Message", {
-      height: 600,
-      width: 600
+      height: 500,
+      width: 500
     })
     .then(closePayLoad => {
       if (!tableau.extensions.settings.get(selectColumns)) {
