@@ -26,6 +26,11 @@ body {
   margin: 0;
 }
 
+#footer {
+  position: fixed;
+  bottom: 0;
+}
+
 .mdc-tab-bar {
   background-color: rgb(245, 245, 245);
   font-size: 12px;
