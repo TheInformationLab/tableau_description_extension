@@ -27,7 +27,7 @@ function configure() {
   // }/configure.html`;
   tableau.extensions.ui
     .displayDialogAsync(popup, "Payload Message", {
-      height: 500,
+      height: 600,
       width: 500
     })
     .then(closePayLoad => {
