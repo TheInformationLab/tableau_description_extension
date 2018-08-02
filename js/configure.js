@@ -1,7 +1,9 @@
 const selectColumns = "selectColumns";
+const selectHeaders = "selectHeaders";
 let sheets = [];
 let columns = [];
 let selectedColumns = [];
+let selectedHeaders = [];
 
 // when the page has loaded run the settings function
 document.addEventListener("DOMContentLoaded", load);
@@ -21,13 +23,13 @@ function load() {
     let displayColumn = document.getElementById("columns");
     const dashboard = tableau.extensions.dashboardContent.dashboard;
     dashboard.worksheets[0].getDataSourcesAsync().then(function(column) {
-      console.log(column);
+      // console.log(column);
       column[0].fields.forEach((fieldName, item) => {
         if (
           fieldName.description !== undefined &&
           fieldName.isHidden !== true
         ) {
-          console.log(fieldName);
+          // console.log(fieldName);
           let li = `
           <li class="mdc-list-item checkbox-list-ripple-surface">
         <div class="mdc-form-field">
@@ -38,7 +40,7 @@ function load() {
           }" data-calc="${fieldName.isCalculatedField}" data-role="${
             fieldName.role
           }"
-                   class="mdc-checkbox__native-control" checked/>
+                   class="mdc-checkbox__native-control rowsForTable" checked/>
             <div class="mdc-checkbox__background">
               <svg class="mdc-checkbox__checkmark"
                    viewBox="0 0 24 24">
@@ -50,7 +52,6 @@ function load() {
               <div class="mdc-checkbox__mixedmark"></div>
             </div>
           </div>
-
           <label for=${item}>${fieldName.name}</label>
           </div>
         </li>
@@ -64,7 +65,11 @@ function load() {
 
 function settings() {
   selectedColumns = [];
-  let columnsToAdd = document.querySelectorAll(".mdc-checkbox__native-control");
+  // selectedHeaders = [];
+  // let columnsToAdd = document.querySelectorAll(".mdc-checkbox__native-control");
+  let columnsToAdd = document.querySelectorAll(".rowsForTable");
+  // let headersToAdd = document.querySelectorAll(".rowsForHeader");
+
   Array.from(columnsToAdd).forEach(columns => {
     if (columns.checked === true) {
       let object = {
@@ -80,6 +85,19 @@ function settings() {
     selectColumns,
     JSON.stringify(selectedColumns)
   );
+
+  // Array.from(headersToAdd).forEach(header => {
+  //   if (header.checked === true) {
+  //     let headerObject = {
+  //       name: header.name
+  //     };
+  //     selectedHeaders.push(headerObject);
+  //   }
+  // });
+  // tableau.extensions.settings.set(
+  //   selectHeaders,
+  //   JSON.stringify(selectedHeaders)
+  // );
 
   tableau.extensions.settings.saveAsync().then(newSavedSettings => {
     tableau.extensions.ui.closeDialog("Settings Saved!");

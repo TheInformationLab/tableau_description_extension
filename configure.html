@@ -26,8 +26,69 @@
         <div class="card-content">
             <div class="mdc-layout-grid">
                 <div class="mdc-layout-grid__inner">
+                    <!-- <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                        <label class="columnSelect">Select Table Headers</label>
+                        <ul class="mdc-list" id="headers">
+                            <li class="mdc-list-item checkbox-list-ripple-surface">
+                                <div class="mdc-form-field">
+                                    <div class="mdc-checkbox">
+                                        <input type="checkbox" class="mdc-checkbox__native-control rowsForHeader" name="Fieldname" checked/>
+                                        <div class="mdc-checkbox__background">
+                                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                                <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                                            </svg>
+                                            <div class="mdc-checkbox__mixedmark"></div>
+                                        </div>
+                                    </div>
+                                    <label for='FieldName'>Fieldname</label>
+                                </div>
+                            </li>
+                            <li class="mdc-list-item checkbox-list-ripple-surface">
+                                <div class="mdc-form-field">
+                                    <div class="mdc-checkbox">
+                                        <input type="checkbox" class="mdc-checkbox__native-control rowsForHeader" name="Type" checked/>
+                                        <div class="mdc-checkbox__background">
+                                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                                <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                                            </svg>
+                                            <div class="mdc-checkbox__mixedmark"></div>
+                                        </div>
+                                    </div>
+                                    <label for='Role'>Dimension/Measure Indicator</label>
+                                </div>
+                            </li>
+                            <li class="mdc-list-item checkbox-list-ripple-surface">
+                                <div class="mdc-form-field">
+                                    <div class="mdc-checkbox">
+                                        <input type="checkbox" class="mdc-checkbox__native-control rowsForHeader" name="CalculatedField" checked/>
+                                        <div class="mdc-checkbox__background">
+                                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                                <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                                            </svg>
+                                            <div class="mdc-checkbox__mixedmark"></div>
+                                        </div>
+                                    </div>
+                                    <label for='calc'>Calculated Field Indicator</label>
+                                </div>
+                            </li>
+                            <li class="mdc-list-item checkbox-list-ripple-surface">
+                                <div class="mdc-form-field">
+                                    <div class="mdc-checkbox">
+                                        <input type="checkbox" class="mdc-checkbox__native-control rowsForHeader" name="Description" checked/>
+                                        <div class="mdc-checkbox__background">
+                                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                                <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                                            </svg>
+                                            <div class="mdc-checkbox__mixedmark"></div>
+                                        </div>
+                                    </div>
+                                    <label for='descriptionIndicator'>Field Description (specified in Comments)</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> -->
                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                        <label class="columnSelect">Select Columns</label>
+                        <label class="columnSelect">Select Datasource Columns</label>
                     </div>
                     <ul class="mdc-list" id="columns">
                     </ul>
@@ -44,7 +105,7 @@
             <button class="mdc-button mdc-card__action mdc-card__action--button mdc-theme--secondary" id="cancelButton">Cancel</button>
         </div>
     </div>
-    <script src="js/tableau-extensions-0.12.8.min.js"></script>
+    <script src="js/tableau-extensions-1.latest.min.js"></script>
     <script src="js/configure.js"></script>
 </body>
 

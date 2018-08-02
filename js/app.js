@@ -1,4 +1,5 @@
 const selectColumns = "selectColumns";
+// const selectHeaders = "selectHeaders";
 
 document.addEventListener("DOMContentLoaded", load);
 document.getElementById("configure").addEventListener("click", load);
@@ -50,18 +51,34 @@ function configure() {
 }
 
 function showTable() {
+  //remove the text
+  document.getElementById("initial").style.display = "none";
   //show the table in the HTML
   document.querySelector(".mdc-data-table").style.display = "flex";
   //remove the button
   document.querySelector(".mdc-card__actions").style.display = "none";
+
   let selectedColumns = tableau.extensions.settings.get(selectColumns);
-  // console.log(JSON.parse(selectedColumns));
+  // let columnData = tableau.extensions.settings.get(selectHeaders);
   let data = JSON.parse(selectedColumns);
+  // let selectedHeaders = JSON.parse(columnData);
+  // console.log(selectedHeaders);
 
   //get table and loop over to add the name + descriptions + role + calculated field
+  // let fullTable = document.querySelector(".mdc-data-table__content");
   let table = document.getElementById("table");
+  // let tableHeader = document.getElementById("tableHeader");
+
   //remove the current table
   table.innerHTML = "";
+  // tableHeader.innerHTML = "";
+
+  // selectedHeaders.forEach(h => {
+  //   let header = `<th class="mdc-data-table--sortable" aria-label="${h.name}">${
+  //     h.name
+  //   }</th>`;
+  //   tableHeader.innerHTML += header;
+  // });
 
   data.forEach(e => {
     let row = `<tr class=${e.role}>
@@ -72,5 +89,5 @@ function showTable() {
       </tr>`;
     table.innerHTML += row;
   });
-  console.log(table);
+  // console.log(fullTable.rows);
 }
