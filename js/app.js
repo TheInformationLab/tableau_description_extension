@@ -85,5 +85,4 @@ function showTable() {
       </tr>`;
     table.innerHTML += row;
   });
-  // console.log(fullTable.rows);
 }

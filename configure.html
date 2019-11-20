@@ -1,112 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/material-components-web.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    <script src="js/material-components-web.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/material-components-web.css" />
+    <script src="./js/material-components-web.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Description Extension</title>
+  </head>
 
-</head>
-
-<body class="mdc-typography">
+  <body class="mdc-typography">
     <nav id="basic-tab-bar" class="mdc-tab-bar">
-        <a class="mdc-tab mdc-tab--active" href="#">Select Fields
-            <span class="mdc-tab__indicator"></span>
-        </a>
-        <a class="mdc-tab" href="./about.html">About Extension
-            <span class="mdc-tab__indicator"></span>
-        </a>
+      <a class="mdc-tab mdc-tab--active" href="#"
+        >Select Fields
+        <span class="mdc-tab__indicator"></span>
+      </a>
+      <a class="mdc-tab" href="./about.html"
+        >About Extension
+        <span class="mdc-tab__indicator"></span>
+      </a>
     </nav>
     <div class="mdc-card mdc-card--outlined configure-card">
-        <div class="card-content">
-            <div class="mdc-layout-grid">
-                <div class="mdc-layout-grid__inner">
-                    <!-- <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                        <label class="columnSelect">Select Table Headers</label>
-                        <ul class="mdc-list" id="headers">
-                            <li class="mdc-list-item checkbox-list-ripple-surface">
-                                <div class="mdc-form-field">
-                                    <div class="mdc-checkbox">
-                                        <input type="checkbox" class="mdc-checkbox__native-control rowsForHeader" name="Fieldname" checked/>
-                                        <div class="mdc-checkbox__background">
-                                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                            </svg>
-                                            <div class="mdc-checkbox__mixedmark"></div>
-                                        </div>
-                                    </div>
-                                    <label for='FieldName'>Fieldname</label>
-                                </div>
-                            </li>
-                            <li class="mdc-list-item checkbox-list-ripple-surface">
-                                <div class="mdc-form-field">
-                                    <div class="mdc-checkbox">
-                                        <input type="checkbox" class="mdc-checkbox__native-control rowsForHeader" name="Type" checked/>
-                                        <div class="mdc-checkbox__background">
-                                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                            </svg>
-                                            <div class="mdc-checkbox__mixedmark"></div>
-                                        </div>
-                                    </div>
-                                    <label for='Role'>Dimension/Measure Indicator</label>
-                                </div>
-                            </li>
-                            <li class="mdc-list-item checkbox-list-ripple-surface">
-                                <div class="mdc-form-field">
-                                    <div class="mdc-checkbox">
-                                        <input type="checkbox" class="mdc-checkbox__native-control rowsForHeader" name="CalculatedField" checked/>
-                                        <div class="mdc-checkbox__background">
-                                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                            </svg>
-                                            <div class="mdc-checkbox__mixedmark"></div>
-                                        </div>
-                                    </div>
-                                    <label for='calc'>Calculated Field Indicator</label>
-                                </div>
-                            </li>
-                            <li class="mdc-list-item checkbox-list-ripple-surface">
-                                <div class="mdc-form-field">
-                                    <div class="mdc-checkbox">
-                                        <input type="checkbox" class="mdc-checkbox__native-control rowsForHeader" name="Description" checked/>
-                                        <div class="mdc-checkbox__background">
-                                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                            </svg>
-                                            <div class="mdc-checkbox__mixedmark"></div>
-                                        </div>
-                                    </div>
-                                    <label for='descriptionIndicator'>Field Description (specified in Comments)</label>
-                                </div>
-                            </li>
-                        </ul>
-                    </div> -->
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                        <label class="columnSelect">Select Datasource Columns</label>
-                    </div>
-                    <ul class="mdc-list" id="columns">
-                    </ul>
-                </div>
+      <div class="card-content">
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+              <label class="columnSelect">Select Datasource Columns</label>
             </div>
-
-
+            <ul class="mdc-list" id="columns"></ul>
+          </div>
         </div>
+      </div>
     </div>
     <div class="mdc-card__actions mdc-card__actions--full-bleed">
-        <div class="mdc-card__action-buttons">
-            <button class="mdc-button mdc-card__action mdc-card__action--button mdc-theme--secondary" style="color: #fff !important; background-color: orange"
-                id="saveButton">Save</button>
-            <button class="mdc-button mdc-card__action mdc-card__action--button mdc-theme--secondary" id="cancelButton">Cancel</button>
-        </div>
+      <div class="mdc-card__action-buttons">
+        <button
+          class="mdc-button mdc-card__action mdc-card__action--button mdc-theme--secondary"
+          style="color: #fff !important; background-color: orange"
+          id="saveButton"
+        >
+          Save
+        </button>
+        <button
+          class="mdc-button mdc-card__action mdc-card__action--button mdc-theme--secondary"
+          id="cancelButton"
+        >
+          Cancel
+        </button>
+      </div>
     </div>
-    <script src="js/tableau-extensions-1.latest.min.js"></script>
-    <script src="js/configure.js"></script>
-</body>
-
+    <script src="./js/tableau-extensions-1.latest.min.js"></script>
+    <script src="./js/configure.js"></script>
+  </body>
 </html>

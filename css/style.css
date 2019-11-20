@@ -1,5 +1,8 @@
 body {
   height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  src: url("../fonts/Roboto-Regular.ttf");
 }
 
 .mdc-typography {
@@ -359,4 +362,10 @@ body {
 .mdc-data-table__content[dir="rtl"]
   .mdc-data-table--sortable.mdc-data-table--sort-desc:after {
   content: "arrow_upward";
+}
+
+svg {
+  height: 100%;
+  width: 100;
+  fill: grey;
 }
