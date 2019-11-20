@@ -369,3 +369,11 @@ svg {
   width: 100;
   fill: grey;
 }
+
+.listText {
+  color: black;
+}
+
+#columns {
+  width: 500px;
+}

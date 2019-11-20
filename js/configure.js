@@ -28,6 +28,8 @@ function load() {
           fieldName.description !== undefined &&
           fieldName.isHidden !== true
         ) {
+          console.log(fieldName);
+
           let li = `
           <li class="mdc-list-item checkbox-list-ripple-surface">
         <div class="mdc-form-field">
@@ -46,9 +48,10 @@ function load() {
               <div class="mdc-checkbox__mixedmark"></div>
             </div>
           </div>
-          <label for=${item}>${fieldName.name}</label>
+          <label class="listText" for=${item}>${fieldName.name}</label>
           </div>
-        </li>
+          </li>
+          <p>${fieldName.name}</p>
           `;
           displayColumn.innerHTML += li;
         }
