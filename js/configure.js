@@ -51,7 +51,6 @@ function load() {
           <label class="listText" for=${item}>${fieldName.name}</label>
           </div>
           </li>
-          <p>${fieldName.name}</p>
           `;
           displayColumn.innerHTML += li;
         }
